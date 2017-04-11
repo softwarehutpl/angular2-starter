@@ -1,0 +1,7 @@
+{
+  "api": {
+    "version": "0.0.1",
+    "host": "http://localhost:3000",
+  },
+}
+
