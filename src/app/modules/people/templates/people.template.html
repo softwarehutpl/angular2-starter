@@ -1,0 +1,29 @@
+<br>
+<h4>{{pageTitle}}</h4>
+<br>
+<table class='table' *ngIf="people && people.length">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>surmame</th>
+            <th>position</th>
+            <th>addres</th>
+            <th>phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let person of people">
+            <td>{{ person.id }}</td>
+            <td>
+                <a uiSref="person" [uiParams]="{id: person.id}" uiSrefActive="active">
+                    {{ person.name }}
+                </a>
+            </td>
+            <td>{{ person.surmame }}</td>
+            <td>{{ person.position }}</td>
+            <td>{{ person.addres }}</td>
+            <td>{{ person.phone }}</td>
+        </tr>
+    </tbody>
+</table>
