@@ -7,6 +7,11 @@ import { Person } from '../person';
     selector: 'add_person',
     templateUrl: 'app/modules/people/templates/person-add.template.html'
 })
+
+/**
+ * Person Add Component
+ * defines person data model for form, on submit data are send to backend
+ */
 export class PersonAddComponent {
 
     public model = new Person('', '', '', '', null);
@@ -19,7 +24,6 @@ export class PersonAddComponent {
     }
     public onSubmit() {
         this.submitted = true;
-        console.log('model', this.model);
         this.peopleService.addPerson(this.model).subscribe(
             (response) => this.stateService.go('people') );
     }

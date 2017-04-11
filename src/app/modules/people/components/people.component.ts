@@ -7,16 +7,21 @@ import { PeopleInterface } from '../people.interface';
     selector: 'people',
     templateUrl: 'app/modules/people/templates/people.template.html'
 })
+
+/**
+ * People Component
+ * on init gets data using peopleService and set it to people array
+ */
 export class PeopleComponent implements OnInit {
     public pageTitle: string = 'People List';
     public people: PeopleInterface[];
     public errorMessage: string;
 
-    constructor(private _peopleService: PeopleService) {
+    constructor(private peopleService: PeopleService) {
 
     }
     public ngOnInit(): void {
-        this._peopleService.getPeople()
+        this.peopleService.getPeople()
             .subscribe((people) => this.people = people,
                 (error) => this.errorMessage = error);
     }

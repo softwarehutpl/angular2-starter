@@ -8,6 +8,11 @@ import { Login } from '../login';
     templateUrl: 'app/modules/login/templates/login.template.html'
 })
 
+/**
+ * Login Component
+ * Form with vatidation, on submit with correct credentials
+ * redirects to home state
+ */
 export class LoginComponent {
     public pageTitle: string = 'Login Page';
     public model = new Login('', '');
@@ -23,7 +28,6 @@ export class LoginComponent {
         this.submitted = true;
         this.authService.login(this.model.username, this.model.password)
             .then(() => {
-                console.log('resolved');
                 this.stateService.go('home');
             })
             .catch(() => {

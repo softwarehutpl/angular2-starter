@@ -7,6 +7,10 @@ import 'jquery-ui';
     templateUrl: 'components/datepicker/templates/datepicker.template.html'
 })
 
+/**
+ * Date Picker Component
+ * Input component with jquery ui datepicker
+ */
 export class DatePickerComponent implements OnInit {
     @ViewChild('pickerinput') element;
 
