@@ -5,8 +5,9 @@
     "build": "webpack --progress",
     "build:prod": "webpack -p --progress",
     "postinstall": "typings install",
-    "dev": "webpack-dev-server --inline --progress --content-base=./src/",
-    "backend": "json-server db.json"
+    "server": "webpack-dev-server --inline --progress --content-base=./src/",
+    "backend": "json-server db.json",
+    "dev": "concurrently --kill-others \"npm run backend\" \"npm run server\""
   },
   "dependencies": {
     "@angular/common": "2.4.1",
@@ -19,9 +20,11 @@
     "@angular/router": "3.0.1",
     "bootstrap": "^4.0.0-alpha.6",
     "codelyzer": "^2.0.1",
+    "concurrently": "^3.4.0",
     "core-js": "2.4.1",
     "jquery": "^2.2.3",
     "jquery-ui": "1.10.5",
+    "json-server": "^0.9.6",
     "reflect-metadata": "0.1.8",
     "rxjs": "5.0.0-beta.12",
     "typescript": "^2.0.3",

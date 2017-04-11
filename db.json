@@ -1,0 +1,85 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "people": [
+    {
+      "id": 1,
+      "name": "Michał",
+      "surmame": "Kryński",
+      "position": "Frontend developer",
+      "addres": "Michałowo",
+      "phone": 123456789
+    },
+    {
+      "id": 2,
+      "name": "Piotrek",
+      "surmame": "Tarasiuk",
+      "position": "FullStack developer",
+      "addres": "Białostoczek",
+      "phone": 123456789
+    },
+    {
+      "id": 3,
+      "name": "Paweł",
+      "surmame": "Siemieniuk",
+      "position": "Frontend developer",
+      "addres": "Bojary",
+      "phone": 123456789
+    },
+    {
+      "id": 4,
+      "name": "Roman",
+      "surmame": "Jarmoc",
+      "position": "FullStack developer",
+      "addres": "Nowe Miasto",
+      "phone": 123456789
+    },
+    {
+      "id": 5,
+      "name": "adaasd",
+      "surmame": "sss",
+      "position": "asdas",
+      "addres": "ddd",
+      "phone": 123456789
+    },
+    {
+      "name": "eeeeeeeeeeeeeeee",
+      "surmame": "aaaaaaaaaa",
+      "position": "sssssssssssss",
+      "addres": "ddddddddddddddd",
+      "phone": 55555555555,
+      "id": 6
+    },
+    {
+      "name": "sdfs",
+      "surmame": "dfsfsd",
+      "position": "sdfs",
+      "addres": "sdfs",
+      "phone": 123,
+      "id": 7
+    },
+    {
+      "name": "asdasd",
+      "surmame": "adsasd",
+      "position": "asdasd",
+      "addres": "aasdads",
+      "phone": 111,
+      "id": 8
+    }
+  ]
+}

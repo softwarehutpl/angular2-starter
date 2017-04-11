@@ -13,13 +13,13 @@
 // })
 
 // export class DatePickerComponent implements AfterViewInit {
-//     @ViewChild('pickerinput') el:ElementRef;
 
-//     ngAfterViewInit() {
-//         $(this.el.nativeElement)
-//             .on('change', (e, args) => {
-//                 console.log('%c args; ', 'background: #F00; color: #FFF', args);
-//             });
+//     // @ViewChild('pickerinput') element:ElementRef;
+
+//     private ngAfterViewInit() {
+//     //     $(this.element.nativeElement)
+//     //         .on('change', (e, args) => {
+//     //             console.log('%c args; ', 'background: #F00; color: #FFF', args);
+//     //         });
 //     }
-
 // }
