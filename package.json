@@ -7,7 +7,9 @@
     "postinstall": "typings install",
     "server": "webpack-dev-server --inline --progress --content-base=./src/",
     "backend": "json-server db.json",
-    "dev": "concurrently --kill-others \"npm run backend\" \"npm run server\""
+    "dev": "concurrently --kill-others \"npm run backend\" \"npm run server\"",
+    "tpj": "typings install --global --save-dev dt~jquery",
+    "tpi": "typings install"
   },
   "dependencies": {
     "@angular/common": "2.4.1",

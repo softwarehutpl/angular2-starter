@@ -1,8 +1,8 @@
 export interface PeopleInterface {
     id: number;
     name: string;
-    surmame: string;
+    surname: string;
     position: string;
     description: string;
-    addres: string;
+    address: string;
 }

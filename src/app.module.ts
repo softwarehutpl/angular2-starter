@@ -27,8 +27,8 @@ import { AuthService } from './helpers/auth/services/auth.service';
       FormsModule
   ],
   declarations: [
-    AppComponent,
-    NavBarComponent
+      AppComponent,
+      NavBarComponent,
   ],
   providers: [
       AuthService,
@@ -38,7 +38,8 @@ import { AuthService } from './helpers/auth/services/auth.service';
 export class AppModule {
     constructor(state: StateService) {
       state.defaultErrorHandler((error) => {
-        state.go('login');
+        console.log('%c error ', 'background: #F00; color: #FFF', error);
+        // state.go('login');
       });
 
     }

@@ -9,6 +9,7 @@ import { PeopleService } from './services/people.service';
 import { UIRouterModule } from 'ui-router-ng2';
 import { FormsModule } from '@angular/forms';
 import { PEOPLE_STATES } from './states/people.states';
+import { DatePickerComponent } from '../../../components/datepicker/datepicker.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { PEOPLE_STATES } from './states/people.states';
   declarations: [
       PeopleComponent,
       PersonDetailComponent,
-      PersonAddComponent
+      PersonAddComponent,
+      DatePickerComponent
   ],
   providers: [
       PeopleService,

@@ -12,14 +12,14 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="surmame">Surmame</label>
-        <input type="text" class="form-control" id="surmame"
+        <label for="surname">Surname</label>
+        <input type="text" class="form-control" id="surname"
                required
-               [(ngModel)]="model.surmame" name="surmame"
-               #surmame="ngModel">
-        <div [hidden]="surmame.valid || surmame.pristine"
+               [(ngModel)]="model.surname" name="surname"
+               #surname="ngModel">
+        <div [hidden]="surname.valid || surname.pristine"
              class="alert alert-danger">
-          Surmame is required
+          Surname is required
         </div>
     </div>
     <div class="form-group">
@@ -34,14 +34,14 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="addres">Addres</label>
-        <textarea class="form-control" id="addres"
+        <label for="address">Address</label>
+        <textarea class="form-control" id="address"
                required
-               [(ngModel)]="model.addres" name="addres"
-               #addres="ngModel"></textarea>
-        <div [hidden]="addres.valid || addres.pristine"
+               [(ngModel)]="model.address" name="address"
+               #address="ngModel"></textarea>
+        <div [hidden]="address.valid || address.pristine"
              class="alert alert-danger">
-          Addres is required
+          Address is required
         </div>
     </div>
     <div class="form-group">
@@ -55,22 +55,9 @@
           Phone is required
         </div>
     </div>
+    <div class="form-group">
+        <label for="phone">datepicker test</label>
+        <datepicker></datepicker>
+    </div>
     <button type="submit" class="btn btn-success" [disabled]="!AddUserForm.form.valid">Submit</button>
 </form>
-
-
-
-
-
-
-
-<!--
-<h4>{{ pageTitle }}</h4>
-<br>
-<ul>
-    <li>name: <span><input type='text' [(ngModel)]='name' /></span></li>
-    <li>surmame: <span><input type='text' [(ngModel)]='surmame' /></span></li>
-    <li>position: <span><input type='text' [(ngModel)]='position' /></span></li>
-    <li>addres: <span><input type='text' [(ngModel)]='addres' /></span></li>
-</ul>
-<button (click)="addPerson()">add Person</button> -->

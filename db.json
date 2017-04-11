@@ -20,64 +20,64 @@
     {
       "id": 1,
       "name": "Michał",
-      "surmame": "Kryński",
+      "surname": "Kryński",
       "position": "Frontend developer",
-      "addres": "Michałowo",
+      "address": "Michałowo",
       "phone": 123456789
     },
     {
       "id": 2,
       "name": "Piotrek",
-      "surmame": "Tarasiuk",
+      "surname": "Tarasiuk",
       "position": "FullStack developer",
-      "addres": "Białostoczek",
+      "address": "Białostoczek",
       "phone": 123456789
     },
     {
       "id": 3,
       "name": "Paweł",
-      "surmame": "Siemieniuk",
+      "surname": "Siemieniuk",
       "position": "Frontend developer",
-      "addres": "Bojary",
+      "address": "Bojary",
       "phone": 123456789
     },
     {
       "id": 4,
       "name": "Roman",
-      "surmame": "Jarmoc",
+      "surname": "Jarmoc",
       "position": "FullStack developer",
-      "addres": "Nowe Miasto",
+      "address": "Nowe Miasto",
       "phone": 123456789
     },
     {
       "id": 5,
       "name": "adaasd",
-      "surmame": "sss",
+      "surname": "sss",
       "position": "asdas",
-      "addres": "ddd",
+      "address": "ddd",
       "phone": 123456789
     },
     {
       "name": "eeeeeeeeeeeeeeee",
-      "surmame": "aaaaaaaaaa",
+      "surname": "aaaaaaaaaa",
       "position": "sssssssssssss",
-      "addres": "ddddddddddddddd",
+      "address": "ddddddddddddddd",
       "phone": 55555555555,
       "id": 6
     },
     {
       "name": "sdfs",
-      "surmame": "dfsfsd",
+      "surname": "dfsfsd",
       "position": "sdfs",
-      "addres": "sdfs",
+      "address": "sdfs",
       "phone": 123,
       "id": 7
     },
     {
       "name": "asdasd",
-      "surmame": "adsasd",
+      "surname": "adsasd",
       "position": "asdasd",
-      "addres": "aasdads",
+      "address": "aasdads",
       "phone": 111,
       "id": 8
     }
