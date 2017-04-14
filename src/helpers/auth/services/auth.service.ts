@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
+/**
+ * Auth Service
+ * Service is a mock
+ */
 export class AuthService {
     public authStatus() {
         if (localStorage.getItem('currentUser')) {

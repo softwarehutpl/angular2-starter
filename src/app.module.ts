@@ -35,12 +35,19 @@ import { AuthService } from './helpers/auth/services/auth.service';
   ],
   bootstrap: [ AppComponent ]
 })
+
+/**
+ * App Module
+ * Main module where are imported other modules
+ * and application components
+ * also application routes are initiate here
+ * class contain state error handler which is redirecting to login
+ */
 export class AppModule {
     constructor(state: StateService) {
       state.defaultErrorHandler((error) => {
         console.log('%c error ', 'background: #F00; color: #FFF', error);
         state.go('login');
       });
-
     }
 }
