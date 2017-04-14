@@ -14,7 +14,7 @@ import { Person } from '../person';
  */
 export class PersonAddComponent {
 
-    public model = new Person('', '', '', '', null);
+    public model = new Person('', '', '', '', null, "12/01/1972");
     public submitted = false;
 
     constructor(
@@ -24,6 +24,7 @@ export class PersonAddComponent {
     }
     public onSubmit() {
         this.submitted = true;
+        console.log('this.model ', this.model);
         this.peopleService.addPerson(this.model).subscribe(
             (response) => this.stateService.go('people') );
     }

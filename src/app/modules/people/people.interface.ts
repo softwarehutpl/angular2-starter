@@ -5,4 +5,5 @@ export interface PeopleInterface {
     position: string;
     description: string;
     address: string;
+    birthdate: string;
 }

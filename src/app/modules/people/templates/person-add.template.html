@@ -57,7 +57,7 @@
     </div>
     <div class="form-group">
         <label for="phone">Date</label>
-        <datepicker></datepicker>
+        <datepicker [(inputdate)]='model.birthdate'></datepicker>
     </div>
     <button type="submit" class="btn btn-success" [disabled]="!AddUserForm.form.valid">Submit</button>
 </form>

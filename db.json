@@ -23,7 +23,8 @@
       "surname": "Kryński",
       "position": "Frontend developer",
       "address": "Michałowo",
-      "phone": 123456789
+      "phone": 123456789,
+      "birthdate": "01/17/2017"
     },
     {
       "id": 2,
@@ -31,7 +32,8 @@
       "surname": "Tarasiuk",
       "position": "FullStack developer",
       "address": "Białostoczek",
-      "phone": 123456789
+      "phone": 123456789,
+      "birthdate": "04/17/2017"
     },
     {
       "id": 3,
@@ -39,7 +41,8 @@
       "surname": "Siemieniuk",
       "position": "Frontend developer",
       "address": "Bojary",
-      "phone": 123456789
+      "phone": 123456789,
+      "birthdate": "04/17/2017"
     },
     {
       "id": 4,
@@ -47,39 +50,8 @@
       "surname": "Jarmoc",
       "position": "FullStack developer",
       "address": "Nowe Miasto",
-      "phone": 123456789
-    },
-    {
-      "id": 5,
-      "name": "adaasd",
-      "surname": "sss",
-      "position": "asdas",
-      "address": "ddd",
-      "phone": 123456789
-    },
-    {
-      "name": "eeeeeeeeeeeeeeee",
-      "surname": "aaaaaaaaaa",
-      "position": "sssssssssssss",
-      "address": "ddddddddddddddd",
-      "phone": 55555555555,
-      "id": 6
-    },
-    {
-      "name": "sdfs",
-      "surname": "dfsfsd",
-      "position": "sdfs",
-      "address": "sdfs",
-      "phone": 123,
-      "id": 7
-    },
-    {
-      "name": "asdasd",
-      "surname": "adsasd",
-      "position": "asdasd",
-      "address": "aasdads",
-      "phone": 111,
-      "id": 8
+      "phone": 123456789,
+      "birthdate": "04/17/2017"
     }
   ]
 }

@@ -4,6 +4,7 @@ export class Person {
         public surname: string,
         public position: string,
         public address: string,
-        public phone: number
+        public phone: number,
+        public birthdate: string
     ) {}
 }
