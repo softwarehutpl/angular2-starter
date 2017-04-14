@@ -1,12 +1,20 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var extractTextPlugin = require("extract-text-webpack-plugin");
+var precss = require('precss');
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
     entry: './src/main.ts',
     output: {
         path: 'dist',
         filename: 'app.bundle.js'
+    },
+    postcss: function() {
+        return [
+            precss,
+            autoprefixer({ browsers: ['> 1%', 'IE 7'] })
+        ];
     },
     module: {
         preLoaders: [
@@ -25,8 +33,13 @@ module.exports = {
             {
                 test: /\.scss$/,
                 loader: 'style-loader!css-loader!sass-loader'
+            }, {
+                test: /\.css$/,
+                loader: extractTextPlugin.extract('css!postcss')
+            }, {
+                test: /\.(png|jpg|gif)$/,
+                loader: 'file-loader?name=[path][name].[ext]'
             }
-
         ],
         rules: [
             {
@@ -38,10 +51,8 @@ module.exports = {
                 }, {
                     loader: "sass-loader"
                 }]
-            } , {
-                test: /\.css$/,
-                loader: extractTextPlugin.extract('css!postcss')
-            }, {
+            },
+            {
                 test: require.resolve('jquery'),
                 use: [{
                     loader: 'expose-loader',
