@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import * as $ from "jquery";
 import 'jquery-ui';
+// TO DO: import jquery ui css
+// import 'jquery-ui/themes/base/jquery-ui.css';
 
 @Component({
     selector: 'datepicker',

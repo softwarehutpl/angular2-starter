@@ -39,7 +39,7 @@ export class AppModule {
     constructor(state: StateService) {
       state.defaultErrorHandler((error) => {
         console.log('%c error ', 'background: #F00; color: #FFF', error);
-        // state.go('login');
+        state.go('login');
       });
 
     }

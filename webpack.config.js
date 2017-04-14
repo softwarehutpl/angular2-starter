@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var extractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: './src/main.ts',
@@ -27,16 +28,30 @@ module.exports = {
             }
 
         ],
-        rules: [{
-            test: /\.scss$/,
-            use: [{
-                loader: "style-loader"
+        rules: [
+            {
+                test: /\.scss$/,
+                use: [{
+                    loader: "style-loader"
+                }, {
+                    loader: "css-loader"
+                }, {
+                    loader: "sass-loader"
+                }]
+            } , {
+                test: /\.css$/,
+                loader: extractTextPlugin.extract('css!postcss')
             }, {
-                loader: "css-loader"
-            }, {
-                loader: "sass-loader"
-            }]
-        }]
+                test: require.resolve('jquery'),
+                use: [{
+                    loader: 'expose-loader',
+                    options: 'jQuery'
+                },{
+                    loader: 'expose-loader',
+                    options: '$'
+                }]
+            }
+        ]
     },
     resolve: {
         extensions: ['', '.js', '.ts']
@@ -44,7 +59,8 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html'
-        })
+        }),
+        new extractTextPlugin('[name].css')
     ],
     tslint: {
         tsConfigFile: 'tsconfig.json',
