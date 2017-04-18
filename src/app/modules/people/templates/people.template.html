@@ -16,7 +16,7 @@
         <tr *ngFor="let person of people">
             <td>{{ person.id }}</td>
             <td>
-                <a uiSref="person" [uiParams]="{id: person.id}" uiSrefActive="active">
+                <a uiSref="main.layouts.people.person" [uiParams]="{id: person.id}" uiSrefActive="active">
                     {{ person.name }}
                 </a>
             </td>

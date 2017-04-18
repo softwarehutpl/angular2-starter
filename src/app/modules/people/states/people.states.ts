@@ -6,21 +6,24 @@ import { PersonDetailComponent } from '../components/person-detail.component';
 /** The top level state(s) */
 export let PEOPLE_STATES: any[] = [
     {
-        name: 'people',
+        name: 'main.layouts.people',
         url: '/people',
-        component: PeopleComponent,
-        resolve: [ AuthGuard ],
+        views: {
+            $default: { component: PeopleComponent }
+        },
     },
     {
-        name: 'person',
-        url: '/people/:id',
-        component: PersonDetailComponent,
-        resolve: [ AuthGuard ],
+        name: 'main.layouts.people.person',
+        url: '/:id',
+        views: {
+            '$default@main.layouts': { component: PersonDetailComponent }
+        },
     },
     {
-        name: 'add_person',
-        url: '/people/add',
-        component: PersonAddComponent,
-        resolve: [ AuthGuard ],
+        name: 'main.layouts.people.add_person',
+        url: '/add',
+        views: {
+            '$default@main.layouts': { component: PersonAddComponent }
+        },
     },
 ];

@@ -35,7 +35,5 @@ export class DatePickerComponent implements OnInit {
                 }
             }
         );
-        console.log('inputdate', this.inputdate);
     }
-
 }

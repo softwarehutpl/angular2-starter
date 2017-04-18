@@ -23,7 +23,7 @@ export class NavBarComponent {
     public logout() {
         this.authService.logout()
             .then(() => {
-                this.stateService.go('login');
+                this.stateService.go('main.login');
             });
     }
 }

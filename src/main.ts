@@ -6,7 +6,7 @@ import 'zone.js/dist/zone';
 import 'expose?$!expose?jQuery!jquery';
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppModule } from './app.module';
+import { AppModule } from './app/app.module';
 
 /**
  * creates a browser platform for dynamic (JIT) compilation and bootstraps the AppModule

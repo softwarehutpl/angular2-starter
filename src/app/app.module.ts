@@ -5,12 +5,16 @@ import { UIRouterModule } from 'ui-router-ng2';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { INITIAL_STATES } from './app.states';
-import { AppComponent } from './app/app.component';
-import { PeopleModule } from './app/modules/people/people.module';
-import { LoginModule } from './app/modules/login/login.module';
-import { NavBarComponent } from './components/navbar/navbar.component';
-import { StateService } from 'ui-router-ng2';
-import { AuthService } from './helpers/auth/services/auth.service';
+import { AppComponent } from './app.component';
+import { LayoutsComponent } from '../layouts/layouts.component';
+import { PeopleModule } from './modules/people/people.module';
+import { LoginModule } from './modules/login/login.module';
+import { NavBarComponent } from '../components/navbar/navbar.component';
+import { StateService, trace, Category, UIView } from 'ui-router-ng2';
+import { AuthService } from '../helpers/auth/services/auth.service';
+
+
+trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
 
 @NgModule({
   imports: [
@@ -18,7 +22,7 @@ import { AuthService } from './helpers/auth/services/auth.service';
       CommonModule,
       UIRouterModule.forRoot({
           states: INITIAL_STATES,
-          otherwise: { state: 'home', params: {} },
+          otherwise: { state: 'main', params: {} },
           useHash: true,
       }),
       PeopleModule,
@@ -28,12 +32,13 @@ import { AuthService } from './helpers/auth/services/auth.service';
   ],
   declarations: [
       AppComponent,
+      LayoutsComponent,
       NavBarComponent,
   ],
   providers: [
       AuthService,
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ UIView ]
 })
 
 /**
@@ -47,7 +52,7 @@ export class AppModule {
     constructor(state: StateService) {
       state.defaultErrorHandler((error) => {
         console.log('%c error ', 'background: #F00; color: #FFF', error);
-        state.go('login');
+        state.go('main.login');
       });
     }
 }
