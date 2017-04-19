@@ -12,28 +12,28 @@ import 'jquery-ui/themes/base/jquery-ui.css';
  * Input component with jquery ui datepicker
  */
 export class DatePickerComponent implements OnInit {
-    @ViewChild('pickerinput') element;
+  @ViewChild('pickerinput') public element;
 
-    inputdateValue = "01/01/1992";
-    @Output() inputdateChange = new EventEmitter();
+  private inputdateValue = '01/01/1992';
+  @Output() private inputdateChange = new EventEmitter();
 
-    @Input()
-    get inputdate() {
+  @Input()
+  get inputdate() {
     return this.inputdateValue;
-    }
+  }
 
-    set inputdate(val) {
-        this.inputdateValue = val;
-        this.inputdateChange.emit(this.inputdateValue);
-    }
+  set inputdate(val) {
+    this.inputdateValue = val;
+    this.inputdateChange.emit(this.inputdateValue);
+  }
 
-    public ngOnInit() {
-        $(this.element.nativeElement).datepicker(
-            {
-                onSelect: (pickerDate) => {
-                    this.inputdate = pickerDate;
-                }
-            }
-        );
-    }
+  public ngOnInit() {
+    $(this.element.nativeElement).datepicker(
+      {
+        onSelect: (pickerDate) => {
+            this.inputdate = pickerDate;
+        }
+      }
+    );
+  }
 }

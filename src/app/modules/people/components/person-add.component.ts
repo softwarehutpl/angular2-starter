@@ -13,19 +13,18 @@ import { Person } from '../person';
  * defines person data model for form, on submit data are send to backend
  */
 export class PersonAddComponent {
+  public model = new Person('', '', '', '', null, '12/01/1972');
+  public submitted = false;
 
-    public model = new Person('', '', '', '', null, "12/01/1972");
-    public submitted = false;
-
-    constructor(
-        private peopleService: PeopleService,
-        private stateService: StateService
-    ) {
-    }
-    public onSubmit() {
-        this.submitted = true;
-        console.log('this.model ', this.model);
-        this.peopleService.addPerson(this.model).subscribe(
-            (response) => this.stateService.go('people') );
-    }
+  constructor(
+    private peopleService: PeopleService,
+    private stateService: StateService
+  ) {
+  }
+  public onSubmit() {
+    this.submitted = true;
+    console.log('this.model ', this.model);
+    this.peopleService.addPerson(this.model).subscribe(
+        (response) => this.stateService.go('people') );
+  }
 }

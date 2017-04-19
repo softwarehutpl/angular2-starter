@@ -6,37 +6,33 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { INITIAL_STATES } from './app.states';
 import { AppComponent } from './app.component';
-import { LayoutsComponent } from '../layouts/layouts.component';
+import { LayoutsModule } from '../layouts/layouts.module';
 import { PeopleModule } from './modules/people/people.module';
 import { LoginModule } from './modules/login/login.module';
-import { NavBarComponent } from '../components/navbar/navbar.component';
 import { StateService, trace, Category, UIView } from 'ui-router-ng2';
 import { AuthService } from '../helpers/auth/services/auth.service';
 
-
 trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
-
 @NgModule({
   imports: [
-      BrowserModule,
-      CommonModule,
-      UIRouterModule.forRoot({
-          states: INITIAL_STATES,
-          otherwise: { state: 'main', params: {} },
-          useHash: true,
-      }),
-      PeopleModule,
-      LoginModule,
-      HttpModule,
-      FormsModule
+    BrowserModule,
+    CommonModule,
+    UIRouterModule.forRoot({
+        states: INITIAL_STATES,
+        otherwise: { state: 'main', params: {} },
+        useHash: true,
+    }),
+    LayoutsModule,
+    PeopleModule,
+    LoginModule,
+    HttpModule,
+    FormsModule
   ],
   declarations: [
-      AppComponent,
-      LayoutsComponent,
-      NavBarComponent,
+    AppComponent,
   ],
   providers: [
-      AuthService,
+    AuthService,
   ],
   bootstrap: [ UIView ]
 })

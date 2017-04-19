@@ -18,7 +18,7 @@ import { DatePickerComponent } from '../../../components/datepicker/datepicker.c
       FormsModule,
       UIRouterModule.forChild({
         states: PEOPLE_STATES
-    })
+      })
   ],
   declarations: [
       PeopleComponent,
