@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { INITIAL_STATES } from './app.states';
 import { AppComponent } from './app.component';
 import { LayoutsModule } from '../layouts/layouts.module';
+import { HomeModule } from './modules/home/home.module';
 import { PeopleModule } from './modules/people/people.module';
 import { LoginModule } from './modules/login/login.module';
 import { StateService, trace, Category, UIView } from 'ui-router-ng2';
@@ -19,10 +20,10 @@ trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
     CommonModule,
     UIRouterModule.forRoot({
       states: INITIAL_STATES,
-      otherwise: { state: 'main', params: {} },
       useHash: true,
     }),
     LayoutsModule,
+    HomeModule,
     PeopleModule,
     LoginModule,
     HttpModule,
@@ -45,10 +46,14 @@ trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
  * class contain state error handler which is redirecting to login
  */
 export class AppModule {
-    constructor(state: StateService) {
-      state.defaultErrorHandler((error) => {
+    constructor(stateService: StateService) {
+      stateService.defaultErrorHandler((error) => {
         console.log('%c error ', 'background: #F00; color: #FFF', error);
-        state.go('main.login');
+        if (error === 'unauthorized_home') {
+          stateService.go('main.home_public');
+        } else {
+          stateService.go('main.login');
+        }
       });
     }
 }

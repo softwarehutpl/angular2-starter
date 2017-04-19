@@ -13,17 +13,15 @@ import { AuthService } from '../../helpers/auth/services/auth.service';
  */
 export class NavBarComponent {
   public pageTitle: string = 'Angular 2 starter';
-  public isAuthorized: boolean = false;
   constructor(
     private stateService: StateService,
     private authService: AuthService
   ) {
-    this.isAuthorized = this.authService.authStatus();
   }
   public logout() {
     this.authService.logout()
       .then(() => {
-        this.stateService.go('main.login');
+        this.stateService.go('main.home_public');
       });
   }
 }
