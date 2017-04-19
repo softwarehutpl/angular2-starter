@@ -13,21 +13,21 @@ import { DatePickerComponent } from '../../../components/datepicker/datepicker.c
 
 @NgModule({
   imports: [
-      BrowserModule,
-      CommonModule,
-      FormsModule,
-      UIRouterModule.forChild({
-        states: PEOPLE_STATES
-      })
+    BrowserModule,
+    CommonModule,
+    FormsModule,
+    UIRouterModule.forChild({
+      states: PEOPLE_STATES
+    })
   ],
   declarations: [
-      PeopleComponent,
-      PersonDetailComponent,
-      PersonAddComponent,
-      DatePickerComponent
+    PeopleComponent,
+    PersonDetailComponent,
+    PersonAddComponent,
+    DatePickerComponent
   ],
   providers: [
-      PeopleService,
+    PeopleService,
   ]
 })
 

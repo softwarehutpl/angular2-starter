@@ -1,63 +1,63 @@
 <form (ngSubmit)="onSubmit()" #AddUserForm="ngForm">
-    <h2 class="form-signin-heading">Add new person</h2>
-    <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name"
-               required
-               [(ngModel)]="model.name" name="name"
-               #name="ngModel">
-        <div [hidden]="name.valid || name.pristine"
-             class="alert alert-danger">
-          Name is required
-        </div>
+  <h2 class="form-signin-heading">Add new person</h2>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name"
+    required
+    [(ngModel)]="model.name" name="name"
+    #name="ngModel">
+    <div [hidden]="name.valid || name.pristine"
+      class="alert alert-danger">
+      Name is required
     </div>
-    <div class="form-group">
-        <label for="surname">Surname</label>
-        <input type="text" class="form-control" id="surname"
-               required
-               [(ngModel)]="model.surname" name="surname"
-               #surname="ngModel">
-        <div [hidden]="surname.valid || surname.pristine"
-             class="alert alert-danger">
-          Surname is required
-        </div>
+  </div>
+  <div class="form-group">
+    <label for="surname">Surname</label>
+    <input type="text" class="form-control" id="surname"
+    required
+    [(ngModel)]="model.surname" name="surname"
+    #surname="ngModel">
+    <div [hidden]="surname.valid || surname.pristine"
+      class="alert alert-danger">
+      Surname is required
     </div>
-    <div class="form-group">
-        <label for="position">Position</label>
-        <input type="text" class="form-control" id="position"
-               required
-               [(ngModel)]="model.position" name="position"
-               #position="ngModel">
-        <div [hidden]="position.valid || position.pristine"
-             class="alert alert-danger">
-          Position is required
-        </div>
+  </div>
+  <div class="form-group">
+    <label for="position">Position</label>
+    <input type="text" class="form-control" id="position"
+    required
+    [(ngModel)]="model.position" name="position"
+    #position="ngModel">
+    <div [hidden]="position.valid || position.pristine"
+      class="alert alert-danger">
+      Position is required
     </div>
-    <div class="form-group">
-        <label for="address">Address</label>
-        <textarea class="form-control" id="address"
-               required
-               [(ngModel)]="model.address" name="address"
-               #address="ngModel"></textarea>
-        <div [hidden]="address.valid || address.pristine"
-             class="alert alert-danger">
-          Address is required
-        </div>
+  </div>
+  <div class="form-group">
+    <label for="address">Address</label>
+    <textarea class="form-control" id="address"
+    required
+    [(ngModel)]="model.address" name="address"
+    #address="ngModel"></textarea>
+    <div [hidden]="address.valid || address.pristine"
+      class="alert alert-danger">
+      Address is required
     </div>
-    <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input type="number" class="form-control" id="phone"
-               required
-               [(ngModel)]="model.phone" name="phone"
-               #phone="ngModel">
-        <div [hidden]="phone.valid || phone.pristine"
-             class="alert alert-danger">
-          Phone is required
-        </div>
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone Number</label>
+    <input type="number" class="form-control" id="phone"
+    required
+    [(ngModel)]="model.phone" name="phone"
+    #phone="ngModel">
+    <div [hidden]="phone.valid || phone.pristine"
+      class="alert alert-danger">
+      Phone is required
     </div>
-    <div class="form-group">
-        <label for="phone">Date</label>
-        <datepicker [(inputdate)]='model.birthdate'></datepicker>
-    </div>
-    <button type="submit" class="btn btn-success" [disabled]="!AddUserForm.form.valid">Submit</button>
+  </div>
+  <div class="form-group">
+    <label for="phone">Date</label>
+    <datepicker [(inputdate)]='model.birthdate'></datepicker>
+  </div>
+  <button type="submit" class="btn btn-success" [disabled]="!AddUserForm.form.valid">Submit</button>
 </form>

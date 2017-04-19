@@ -1,11 +1,9 @@
-
 import { Component, OnInit } from '@angular/core';
 import { PeopleService } from '../services/people.service';
-import { PeopleInterface } from '../people.interface';
 
 @Component({
-    selector: 'people',
-    templateUrl: 'app/modules/people/templates/people.template.html'
+  selector: 'people',
+  templateUrl: 'app/modules/people/templates/people.template.html'
 })
 
 /**
@@ -13,16 +11,16 @@ import { PeopleInterface } from '../people.interface';
  * on init gets data using peopleService and set it to people array
  */
 export class PeopleComponent implements OnInit {
-    public pageTitle: string = 'People List';
-    public people: PeopleInterface[];
-    public errorMessage: string;
+  public pageTitle: string = 'People List';
+  public people: any[];
+  public errorMessage: string;
 
-    constructor(private peopleService: PeopleService) {
+  constructor(private peopleService: PeopleService) {
 
-    }
-    public ngOnInit(): void {
-        this.peopleService.getPeople()
-            .subscribe((people) => this.people = people,
-                (error) => this.errorMessage = error);
-    }
+  }
+  public ngOnInit(): void {
+    this.peopleService.getPeople()
+      .subscribe((people) => this.people = people,
+        (error) => this.errorMessage = error);
+  }
 }

@@ -18,9 +18,9 @@ trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
     BrowserModule,
     CommonModule,
     UIRouterModule.forRoot({
-        states: INITIAL_STATES,
-        otherwise: { state: 'main', params: {} },
-        useHash: true,
+      states: INITIAL_STATES,
+      otherwise: { state: 'main', params: {} },
+      useHash: true,
     }),
     LayoutsModule,
     PeopleModule,

@@ -6,13 +6,13 @@ import { NavBarComponent } from '../components/navbar/navbar.component';
 
 @NgModule({
   imports: [
-      UIRouterModule.forChild({
-        states: DEFAULT_STATES
-      })
+    UIRouterModule.forChild({
+      states: DEFAULT_STATES
+    })
   ],
   declarations: [
-      LayoutsComponent,
-      NavBarComponent
+    LayoutsComponent,
+    NavBarComponent
   ]
 })
 
