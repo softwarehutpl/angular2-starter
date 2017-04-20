@@ -13,22 +13,22 @@ export let AuthGuard: any = {
     resolveFn: (trans, stateService, authService) => {
         return new Promise((resolve, reject) => {
             if (authService.authStatus()) {
-                resolve('authorized');
+                resolve();
             } else {
                 reject('unauthorized');
             }
         });
     }
   },
-  home: {
-    token: 'authhome',
+  loggedin: {
+    token: 'loggedin',
     deps: [Transition, StateService, AuthService],
     resolveFn: (trans, stateService, authService) => {
         return new Promise((resolve, reject) => {
             if (authService.authStatus()) {
-                resolve('authorized');
+                reject('already_authorized');
             } else {
-                reject('unauthorized_home');
+                resolve();
             }
         });
     }

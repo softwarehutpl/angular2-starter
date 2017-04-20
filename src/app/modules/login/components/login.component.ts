@@ -28,10 +28,10 @@ export class LoginComponent {
     this.submitted = true;
     this.authService.login(this.model.username, this.model.password)
       .then(() => {
-          this.stateService.go('main.home');
+          this.stateService.go('home');
       })
       .catch(() => {
-          this.stateService.go('main.login');
+          this.stateService.go('login');
       });
   }
 }

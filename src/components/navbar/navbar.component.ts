@@ -21,7 +21,7 @@ export class NavBarComponent {
   public logout() {
     this.authService.logout()
       .then(() => {
-        this.stateService.go('main.home_public');
+        this.stateService.go('main.anonymous.home');
       });
   }
 }

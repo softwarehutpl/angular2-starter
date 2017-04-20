@@ -5,11 +5,11 @@ import {
 
 export let LOGIN_STATES: any[] = [
   {
-    name: 'main.login',
+    name: 'login',
+    parent: 'main.anonymous',
     url: '/login',
     views: {
       $default: { component: LoginComponent },
-      navbar: { component: NavBarDefaultComponent }
     },
   }
 ];

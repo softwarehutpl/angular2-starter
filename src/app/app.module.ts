@@ -21,6 +21,7 @@ trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
     UIRouterModule.forRoot({
       states: INITIAL_STATES,
       useHash: true,
+      otherwise: '/',
     }),
     LayoutsModule,
     HomeModule,
@@ -49,10 +50,12 @@ export class AppModule {
     constructor(stateService: StateService) {
       stateService.defaultErrorHandler((error) => {
         console.log('%c error ', 'background: #F00; color: #FFF', error);
-        if (error === 'unauthorized_home') {
-          stateService.go('main.home_public');
-        } else {
-          stateService.go('main.login');
+        if (error === 'unauthorized') {
+          stateService.go('login');
+        }
+
+        if (error === 'already_authorized') {
+          stateService.go('home');
         }
       });
     }
