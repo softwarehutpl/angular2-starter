@@ -4,6 +4,9 @@ import 'reflect-metadata';
 import 'zone.js/dist/zone';
 
 import 'expose?$!expose?jQuery!jquery';
+import 'tether/dist/js/tether.min.js';
+
+import 'bootstrap/dist/js/bootstrap.min.js';
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';

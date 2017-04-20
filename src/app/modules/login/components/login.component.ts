@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { StateService } from 'ui-router-ng2';
 import { AuthService } from '../../../../helpers/auth/services/auth.service';
+import { ModalService } from '../../../../components/modal/modal.service';
 import { Login } from '../login';
 
 @Component({
@@ -20,7 +21,8 @@ export class LoginComponent {
 
   constructor(
     private stateService: StateService,
-    private authService: AuthService
+    private authService: AuthService,
+    private modalService: ModalService
   ) {
   }
 
@@ -31,7 +33,7 @@ export class LoginComponent {
           this.stateService.go('home');
       })
       .catch(() => {
-          this.stateService.go('login');
+        this.modalService.notification('Warning', 'invalid username or password');
       });
   }
 }

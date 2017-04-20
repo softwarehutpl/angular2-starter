@@ -10,12 +10,14 @@ import { LayoutsModule } from '../layouts/layouts.module';
 import { HomeModule } from './modules/home/home.module';
 import { PeopleModule } from './modules/people/people.module';
 import { LoginModule } from './modules/login/login.module';
+import { ModalModule } from '../components/modal/modal.module';
 import { StateService, trace, Category, UIView } from 'ui-router-ng2';
 import { AuthService } from '../helpers/auth/services/auth.service';
 
 trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
 @NgModule({
   imports: [
+    ModalModule,
     BrowserModule,
     CommonModule,
     UIRouterModule.forRoot({
@@ -36,7 +38,9 @@ trace.enable(Category.TRANSITION, Category.VIEWCONFIG);
   providers: [
     AuthService,
   ],
-  bootstrap: [ UIView ]
+  bootstrap: [
+    UIView
+  ]
 })
 
 /**

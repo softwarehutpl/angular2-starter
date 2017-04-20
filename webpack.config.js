@@ -71,7 +71,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
-        new extractTextPlugin('[name].css')
+        new extractTextPlugin('[name].css'),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery",
+            "Tether": 'tether'
+        })
     ],
     tslint: {
         tsConfigFile: 'tsconfig.json',
