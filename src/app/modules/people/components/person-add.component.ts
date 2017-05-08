@@ -5,7 +5,7 @@ import { Person } from '../person';
 
 @Component({
     selector: 'add_person',
-    templateUrl: 'app/modules/people/templates/person-add.template.html'
+    templateUrl: require('../templates/person-add.template.html')
 })
 
 /**

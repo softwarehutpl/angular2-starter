@@ -4,7 +4,7 @@ import { AuthService } from '../../helpers/auth/services/auth.service';
 
 @Component({
   selector: 'nav-bar',
-  templateUrl: 'components/navbar/templates/navbar.template.html'
+  templateUrl: require('./templates/navbar.template.html')
 })
 
 /**

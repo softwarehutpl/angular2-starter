@@ -3,7 +3,7 @@ import { PeopleService } from '../services/people.service';
 import { Transition } from 'ui-router-ng2';
 
 @Component({
-  templateUrl: 'app/modules/people/templates/person-detail.template.html',
+  templateUrl: require('../templates/person-detail.template.html')
 })
 export class PersonDetailComponent implements OnInit {
   public pageTitle: string = 'Person detail';

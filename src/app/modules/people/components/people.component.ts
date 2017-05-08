@@ -3,7 +3,7 @@ import { PeopleService } from '../services/people.service';
 
 @Component({
   selector: 'people',
-  templateUrl: 'app/modules/people/templates/people.template.html'
+  templateUrl: require('../templates/people.template.html')
 })
 
 /**

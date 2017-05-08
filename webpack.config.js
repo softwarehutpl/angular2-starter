@@ -26,9 +26,28 @@ module.exports = {
         ],
         loaders: [
             {
-                exclude: /node_modules/,
+                // exclude: /node_modules/,
                 test: /\.ts$/,
-                loader: 'ts'
+                // loader: 'ts'
+                // loaders: ['ts', 'angular2-template-loader?keepUrl=true'],
+                loaders: ['awesome-typescript-loader', 'angular2-template-loader?keepUrl=true'],
+                exclude: [/node_modules/, /\.(spec|e2e)\.ts$/]
+            },
+            // {
+            //     test: /\.html$/,
+            //     loader: 'raw-loader',
+            //     include: /src/,
+            //     exclude: [helpers.root('src/index.html')]
+            // },
+
+            {
+                test: /\.(html|css)$/,
+                loader: 'raw-loader',
+                exclude: /\.async\.(html|css)$/
+            },
+            {
+                test: /\.async\.(html|css)$/,
+                loaders: ['file?name=[name].[hash].[ext]', 'extract']
             },
             {
                 test: /\.scss$/,

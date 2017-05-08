@@ -3,7 +3,7 @@ import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'ngbd-modal-content',
-  templateUrl: 'components/modal/notification/notification.template.html'
+  templateUrl: require('./notification.template.html')
 })
 
 export class NotificationComponent {
