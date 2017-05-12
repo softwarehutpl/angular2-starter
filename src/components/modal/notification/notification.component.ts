@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'ngbd-modal-content',
-  templateUrl: require('./notification.template.html')
+  template: require('./notification.template.html')
 })
 
 export class NotificationComponent {

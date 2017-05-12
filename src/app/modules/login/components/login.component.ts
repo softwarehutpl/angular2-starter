@@ -6,7 +6,7 @@ import { Login } from '../login';
 
 @Component({
   selector: 'login',
-  templateUrl: require('../templates/login.template.html')
+  template: require('../templates/login.template.html')
 })
 
 /**

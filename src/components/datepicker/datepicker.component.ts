@@ -4,7 +4,7 @@ import 'jquery-ui/themes/base/jquery-ui.css';
 
 @Component({
     selector: 'datepicker',
-    templateUrl: require('./templates/datepicker.template.html')
+    template: require('./templates/datepicker.template.html')
 })
 
 /**

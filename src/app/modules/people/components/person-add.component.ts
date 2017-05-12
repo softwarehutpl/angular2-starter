@@ -4,8 +4,8 @@ import { StateService } from 'ui-router-ng2';
 import { Person } from '../person';
 
 @Component({
-    selector: 'add_person',
-    templateUrl: require('../templates/person-add.template.html')
+  selector: 'add_person',
+  template: require('../templates/person-add.template.html')
 })
 
 /**

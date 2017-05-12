@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'nav-bar-default',
-  templateUrl: require('./templates/navbar-default.template.html')
+  template: require('./templates/navbar-default.template.html')
 })
 
 /**
